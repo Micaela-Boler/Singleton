@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    AudioSource shotSound;
+    [SerializeField] AudioSource shotSound;
+
 
     private void Update()
     {
@@ -22,16 +23,3 @@ public class PlayerController : MonoBehaviour
 
 
 
-public class Health : MonoBehaviour
-{
-    public int health = 3;
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            health--;
-            Debug.Log("Cantidad de vidas restantes: " + health);
-        }
-    }
-}

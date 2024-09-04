@@ -7,7 +7,7 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager instance { get; private set; }
 
-    public void GetInstance()
+    void Awake()
     {
         if (instance != null && instance != this)
         {
